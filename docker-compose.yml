@@ -1,0 +1,15 @@
+django:
+  build: .
+  volumes:
+    - .:/usr/src/app
+  links:
+    - postgres
+    - memcached
+  ports:
+    - "8000:8000"
+
+postgres:
+  image: postgres:9.3
+
+memcached:
+  image: atbaker/memcached-verbose:latest
