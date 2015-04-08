@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath="$PWD/django-example" wsgi:application
