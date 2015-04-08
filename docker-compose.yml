@@ -1,0 +1,12 @@
+# Docker-compose.yml file for atbaker/docker-django project
+
+# This defines a service for the Django app
+django:
+
+
+# This defines a service for the Postgres database
+postgres:
+
+
+# This defines a service for the Memcached server
+memcached:
