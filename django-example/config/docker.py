@@ -23,9 +23,8 @@ class Docker(Common):
 
     # DATABASE CONFIGURATION
 
-    # PORT_5432_TCP_ADDR = values.Value(environ_prefix='DB', environ_name='PORT_5432_TCP_ADDR')
     import os
-    POSTGRES_HOST = os.environ['DB_PORT_5432_TCP_ADDR']
+    POSTGRES_HOST = os.environ['POSTGRES_PORT_5432_TCP_ADDR']
     DATABASES = values.DatabaseURLValue('postgres://postgres@{0}/postgres'.format(POSTGRES_HOST))
     # END DATABASE CONFIGURATION
 
@@ -55,7 +54,7 @@ class Docker(Common):
     }
     # end django-debug-toolbar
 
-    MEMCACHED_HOST = os.environ['CACHE_PORT_11211_TCP_ADDR']
+    MEMCACHED_HOST = os.environ['MEMCACHED_PORT_11211_TCP_ADDR']
     # CACHES = values.CacheURLValue(default="memcached://{0}:11211".format(MEMCACHED_HOST))
     CACHES = {
         'default': {
