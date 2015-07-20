@@ -73,6 +73,10 @@ class Common(Configuration):
     }
     # END MIGRATIONS CONFIGURATION
 
+    # SESSIONS CONFIGURATION
+    SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+    # foo
+    # END SESSIONS CONFIGURATION
 
     # DEBUG
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
